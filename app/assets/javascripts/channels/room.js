@@ -9,7 +9,7 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   },
 
   received: function(message) {
-    const messages = document.getElementByIdalert(data)
+    const messages = document.getElementById(data)
     messages.innerHTML += message
     // Called when there's incoming data on the websocket for this channel
   },
