@@ -9,7 +9,7 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   },
 
   received: function(message) {
-    const messages = document.getElementById(data)
+    const messages = document.getElementById('messages')
     messages.innerHTML += message
     // Called when there's incoming data on the websocket for this channel
   },
@@ -20,7 +20,6 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 });
 
 document.addEventListener('DOMContentLoaded', function(){
-
   const input = document.getElementById('chat-input')
   const button = document.getElementById('button')
   button.addEventListener('click', function(){
